@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoPulse 3000 - AI-Powered Planetary Healing. Harnessing global data and AI to remove 1 gigaton of CO₂ annually.">
+    <meta name="keywords" content="climate change, AI, carbon reduction, sustainability, NASA data, environmental technology">
+    <meta name="author" content="EcoPulse 3000">
+    <title>EcoPulse 3000 - AI for Planetary Healing</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+    <!-- Animated Background Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand" onclick="showSection('home')">
+                <i class="fas fa-globe"></i>
+                <span class="brand-text">EcoPulse 3000</span>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="#home" onclick="showSection('home')" class="nav-link active">Home</a>
+                <a href="#about" onclick="showSection('about')" class="nav-link">About</a>
+                <a href="#dashboard" onclick="showSection('dashboard')" class="nav-link">Dashboard</a>
+                <a href="#technology" onclick="showSection('technology')" class="nav-link">Technology</a>
+                <a href="#partners" onclick="showSection('partners')" class="nav-link">Partners</a>
+                <a href="#team" onclick="showSection('team')" class="nav-link">Team</a>
+                <a href="#pricing" onclick="showSection('pricing')" class="nav-link">Pricing</a>
+                <a href="#contact" onclick="showSection('contact')" class="nav-link">Contact</a>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="hero-section">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-icon">
+                    <i class="fas fa-globe rotating-globe"></i>
+                </div>
+                <h1 class="hero-title">EcoPulse 3000</h1>
+                <p class="hero-subtitle">AI for Planetary Healing</p>
+                <p class="hero-description">Harnessing global data and AI to remove 1 gigaton of CO₂ annually</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showSection('dashboard')">
+                        Explore Mission <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary" onclick="showSection('contact')">
+                        Join the Movement
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Impact Stats -->
+            <div class="impact-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-card">
+                    <i class="fas fa-globe stat-icon"></i>
+                    <div class="stat-value" id="devicesCount">8.00B</div>
+                    <div class="stat-label">Connected Devices</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-bolt stat-icon"></i>
+                    <div class="stat-value" id="aiEfficiency">99.87%</div>
+                    <div class="stat-label">AI Efficiency</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-wind stat-icon"></i>
+                    <div class="stat-value">1 GT</div>
+                    <div class="stat-label">CO₂/Year Target</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-satellite stat-icon"></i>
+                    <div class="stat-value">NASA</div>
+                    <div class="stat-label">Data Backed</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vision Section -->
+        <div class="vision-section" data-aos="fade-up">
+            <h2 class="section-title">Our Vision</h2>
+            <p class="vision-text">
+                EcoPulse 3000 is a next-generation environmental intelligence platform combining cutting-edge AI, real-time NASA CO₂ data, quantum computing, and global human collaboration to monitor, predict, and actively reduce carbon emissions across the planet. We're building a sustainable future powered by technology, innovation, and collective action from 195 countries worldwide.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About EcoPulse 3000</h2>
+            
+            <div class="about-grid">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-rocket card-icon"></i>
+                    <h3>Our Mission</h3>
+                    <p>To revolutionize climate action through AI-powered solutions, removing 1 gigaton of CO₂ annually and creating a sustainable future for generations to come.</p>
+                </div>
+                
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-bullseye card-icon"></i>
+                    <h3>Our Goal</h3>
+                    <p>Achieve carbon neutrality by 2030 and establish the world's largest AI-driven environmental monitoring network with 100,000+ IoT sensors globally.</p>
+                </div>
+                
+                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-trophy card-icon"></i>
+                    <h3>Our Impact</h3>
+                    <p>Currently monitoring 195 countries, processing 10M+ data points daily, and partnering with 50+ corporations and NGOs worldwide for maximum environmental impact.</p>
+                </div>
+            </div>
+
+            <!-- Company Details -->
+            <div class="company-details" data-aos="fade-up">
+                <h3 class="subsection-title">Company Information</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <strong>Company Type:</strong>
+                            <p>Solo Entrepreneur / Independent Startup</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-calendar"></i>
+                        <div>
+                            <strong>Founded:</strong>
+                            <p>2024 - Bootstrap Phase</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Operations:</strong>
+                            <p>Global Digital-First Platform</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <strong>Team:</strong>
+                            <p>Solo Founder (Open to Partnerships)</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <strong>Stage:</strong>
+                            <p>MVP Development - Seeking Investment</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <strong>Innovation:</strong>
+                            <p>Real-Time AI Climate Monitoring Platform</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-database"></i>
+                        <div>
+                            <strong>Data Sources:</strong>
+                            <p>NASA, NOAA, OpenWeatherMap APIs</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <strong>Technology:</strong>
+                            <p>Full-Stack Web, Real-Time Data Integration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Live Planet Dashboard</h2>
+            <p class="section-subtitle">Real-time monitoring powered by NASA data and AI</p>
+            
+            <div class="dashboard-metrics">
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-chart-line metric-icon"></i>
+                    <div class="metric-value" id="co2Level">419.50</div>
+                    <div class="metric-unit">ppm CO₂</div>
+                    <div class="metric-label">Current Atmospheric Level</div>
+                    <div class="metric-badge live">Live from NASA OCO-3</div>
+                </div>
+                
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-arrow-trend-down metric-icon"></i>
+                    <div class="metric-value" id="co2Removed">2.85M</div>
+                    <div class="metric-unit">tons</div>
+                    <div class="metric-label">CO₂ Removed Today</div>
+                    <div class="metric-badge success">+150 tons/hour</div>
+                </div>
+                
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-map-pin metric-icon"></i>
+                    <div class="metric-value" id="activeProjects">1,247</div>
+                    <div class="metric-unit">projects</div>
+                    <div class="metric-label">Active Global Projects</div>
+                    <div class="metric-badge info">Across 195 countries</div>
+                </div>
+            </div>
+
+            <!-- World Map Placeholder -->
+            <div class="map-container" data-aos="fade-up">
+                <h3 class="subsection-title">Global CO₂ Hotspot Map</h3>
+                <div class="map-placeholder">
+                    <i class="fas fa-globe map-icon"></i>
+                    <p>Interactive world map showing real-time CO₂ concentrations</p>
+                    <p class="map-note">(Integration with Folium/Leaflet.js for production)</p>
+                </div>
+            </div>
+
+            <!-- AI Activity Log -->
+            <div class="ai-log-container" data-aos="fade-up">
+                <h3 class="subsection-title">
+                    <i class="fas fa-microchip"></i> AI Activity Log
+                </h3>
+                <div class="ai-log" id="aiLog"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Advanced Technology Stack</h2>
+            <p class="section-subtitle">Cutting-edge solutions powering planetary healing</p>
+            
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-brain tech-icon"></i>
+                    <h3>Deep Learning Neural Networks</h3>
+                    <p>Advanced AI models processing 10M+ environmental data points daily with 99.94% accuracy</p>
+                </div>
+                
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-atom tech-icon"></i>
+                    <h3>Quantum Computing Integration</h3>
+                    <p>Next-gen computational power for climate prediction modeling and complex simulations</p>
+                </div>
+                
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-link tech-icon"></i>
+                    <h3>Blockchain Carbon Credits</h3>
+                    <p>Transparent, immutable carbon offset verification system with 15,000+ verified credits</p>
+                </div>
+                
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-network-wired tech-icon"></i>
+                    <h3>IoT Sensor Network</h3>
+                    <p>50,000+ sensors across 195 countries monitoring real-time environmental data 24/7</p>
+                </div>
+                
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-satellite-dish tech-icon"></i>
+                    <h3>Satellite Data Integration</h3>
+                    <p>NASA OCO-3, ESA Sentinel-5P real-time atmospheric monitoring and analysis</p>
+                </div>
+                
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-shield-halved tech-icon"></i>
+                    <h3>Edge Computing Security</h3>
+                    <p>Distributed processing with military-grade encryption protecting environmental data</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Global Partners & Collaborators</h2>
+            <p class="section-subtitle">Building the future together with industry leaders</p>
+            
+            <div class="partners-grid" id="partnersGrid"></div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">The Founder</h2>
+            <p class="section-subtitle">Solo entrepreneur building the future of climate action</p>
+            
+            <div class="founder-spotlight" data-aos="fade-up">
+                <div class="founder-card-large">
+                    <div class="founder-avatar-large">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <h3>Independent Founder & Developer</h3>
+                    <p class="founder-role">Chief Everything Officer 🚀</p>
+                    <p class="founder-bio-large">
+                        A passionate solo entrepreneur combining expertise in AI, full-stack development, and climate science to create a revolutionary environmental monitoring platform. Building EcoPulse 3000 from the ground up with real-time data integration, cutting-edge technology, and a vision to make planetary-scale impact accessible to everyone.
+                    </p>
+                    <div class="founder-skills">
+                        <span class="skill-badge"><i class="fas fa-code"></i> Full-Stack Development</span>
+                        <span class="skill-badge"><i class="fas fa-brain"></i> AI & Machine Learning</span>
+                        <span class="skill-badge"><i class="fas fa-database"></i> Real-Time Data APIs</span>
+                        <span class="skill-badge"><i class="fas fa-leaf"></i> Climate Tech</span>
+                        <span class="skill-badge"><i class="fas fa-rocket"></i> Startup Building</span>
+                        <span class="skill-badge"><i class="fas fa-chart-line"></i> Data Visualization</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-philosophy" data-aos="fade-up">
+                <h3 class="subsection-title">Why Solo?</h3>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Speed & Agility</h4>
+                        <p>Quick decision-making and rapid iteration without bureaucracy. Move fast and build impactful solutions.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Clear Vision</h4>
+                        <p>Unified direction and purpose. Every line of code reflects the core mission of planetary healing.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Open to Collaboration</h4>
+                        <p>Actively seeking partners, investors, and advisors who share the vision of using technology for climate action.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advisor-section" data-aos="fade-up">
+                <h3 class="subsection-title">Advisory & Data Partners</h3>
+                <p style="text-align: center; color: var(--text-gray); margin-bottom: 2rem;">
+                    Leveraging expertise from leading institutions and data providers
+                </p>
+                <div class="advisor-grid">
+                    <div class="advisor-card">
+                        <i class="fas fa-satellite"></i>
+                        <h4>NASA</h4>
+                        <p>Open Data Platform</p>
+                    </div>
+                    <div class="advisor-card">
+                        <i class="fas fa-cloud"></i>
+                        <h4>NOAA</h4>
+                        <p>Climate & Weather Data</p>
+                    </div>
+                    <div class="advisor-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>MIT Climate</h4>
+                        <p>Research Resources</p>
+                    </div>
+                    <div class="advisor-card">
+                        <i class="fas fa-globe"></i>
+                        <h4>UN Environment</h4>
+                        <p>Global Standards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Support & Partnership Options</h2>
+            <p class="section-subtitle">Join the mission - Every contribution helps build a sustainable future</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-badge">Community</div>
+                    <h3 class="pricing-title">Early Supporter</h3>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">5K</span>
+                        <span class="period">/ year</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Access to platform beta</li>
+                        <li><i class="fas fa-check"></i> Monthly climate reports</li>
+                        <li><i class="fas fa-check"></i> API access (basic tier)</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li><i class="fas fa-check"></i> Community Discord access</li>
+                        <li><i class="fas fa-check"></i> Early feature previews</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="showSection('contact')">Get Started</button>
+                </div>
+                
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-badge popular">Best Value</div>
+                    <h3 class="pricing-title">Strategic Partner</h3>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">25K</span>
+                        <span class="period">/ year</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Early Supporter</li>
+                        <li><i class="fas fa-check"></i> Full API access + custom endpoints</li>
+                        <li><i class="fas fa-check"></i> Real-time dashboard access</li>
+                        <li><i class="fas fa-check"></i> Priority feature requests</li>
+                        <li><i class="fas fa-check"></i> Co-branding opportunities</li>
+                        <li><i class="fas fa-check"></i> Quarterly strategy calls</li>
+                        <li><i class="fas fa-check"></i> Listed as official partner</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="showSection('contact')">Partner With Us</button>
+                </div>
+                
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-badge">Investor</div>
+                    <h3 class="pricing-title">Equity Investment</h3>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">100K+</span>
+                        <span class="period">/ equity</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Strategic Partner</li>
+                        <li><i class="fas fa-check"></i> Equity stake negotiable</li>
+                        <li><i class="fas fa-check"></i> Advisory role in company direction</li>
+                        <li><i class="fas fa-check"></i> White-label solutions available</li>
+                        <li><i class="fas fa-check"></i> Custom development projects</li>
+                        <li><i class="fas fa-check"></i> Revenue sharing opportunities</li>
+                        <li><i class="fas fa-check"></i> Exclusive technology licensing</li>
+                        <li><i class="fas fa-check"></i> Full transparency & regular updates</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="showSection('contact')">Let's Talk</button>
+                </div>
+            </div>
+
+            <div class="funding-note" data-aos="fade-up">
+                <i class="fas fa-info-circle"></i>
+                <p>
+                    <strong>Note:</strong> As a bootstrap solo startup, your support directly funds platform development, server costs, API subscriptions, and future team expansion. All funds are transparently allocated toward building the most advanced climate monitoring platform available.
+                </p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
+    <p class="section-subtitle">Let's collaborate to build a sustainable future</p>
+
+    <div class="contact-container">
+      <div class="contact-info" data-aos="fade-right">
+        <h3>Get in Touch</h3>
+
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <p><a href="mailto:nagesha3103@gmail.com">nagesha3103@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <strong>Phone</strong>
+            <p>+91 7411013871</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Location</strong>
+            <p>Global Operations - Digital First</p>
+          </div>
+        </div>
+
+        <!-- 🌍 Social Links -->
+        <div class="social-links">
+          <h4>Follow Me</h4>
+          <div class="social-icons">
+            <a href="https://linkedin.com/in/nagesha-g-33b412292" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://x.com/Nagesha31?t=6A7NvTp1GC8-e3Q3km7JrQ&s=08" target="_blank" aria-label="X (Twitter)">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://github.com/nagesha3871" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://nagesha3871.github.io/My-web/" target="_blank" aria-label="Portfolio Website">
+              <i class="fas fa-globe"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 💬 Contact Form -->
+      <form class="contact-form" data-aos="fade-left" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="country">Country *</label>
+            <input type="text" id="country" name="country" required>
+          </div>
+          <div class="form-group">
+            <label for="interest">Area of Interest *</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select an area</option>
+              <option value="developer">Software Development</option>
+              <option value="scientist">Climate Science</option>
+              <option value="researcher">Research</option>
+              <option value="volunteer">Volunteer</option>
+              <option value="partnership">Corporate Partnership</option>
+              <option value="investment">Investment Opportunity</option>
+              <option value="ngo">NGO Collaboration</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="investmentRange">Investment Range (if applicable)</label>
+          <select id="investmentRange" name="investmentRange">
+            <option value="">Select range</option>
+            <option value="50k-100k">$50K - $100K</option>
+            <option value="100k-250k">$100K - $250K</option>
+            <option value="250k-500k">$250K - $500K</option>
+            <option value="500k-1m">$500K - $1M</option>
+            <option value="1m+">$1M+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-globe"></i>
+                    <span>EcoPulse 3000</span>
+                </div>
+                <p class="footer-tagline">AI-Powered Planetary Healing • Removing 1 Gigaton CO₂ Annually</p>
+                <p class="footer-copyright">
+                    © <span id="currentYear"></span> EcoPulse 3000. All rights reserved. | Built with ❤️ for Earth
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
